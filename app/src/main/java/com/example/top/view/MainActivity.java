@@ -1,17 +1,17 @@
-package com.example.top;
+package com.example.top.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.top.adapter.ArtistAdapter;
 import com.example.top.adapter.OnItemClickListener;
 import com.example.top.databinding.ActivityMainBinding;
 import com.example.top.model.Artist;
 import com.example.top.model.ArtistsProvider;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements OnItemClickListener {
 
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     private void initUI() {
         configAdapter();
         configRecyclerView();
+        onFlotaingButtonClick();
     }
 
     private void configAdapter() {
@@ -49,5 +50,16 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
     @Override
     public void onLongItemClick(Artist artist) {
 
+    }
+
+    private void onFlotaingButtonClick() {
+        binding.faButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddArtistActivity.class);
+                intent.putExtra(Artist.ORDER, adapter.getItemCount() - 1);
+                startActivity(intent);
+            }
+        });
     }
 }

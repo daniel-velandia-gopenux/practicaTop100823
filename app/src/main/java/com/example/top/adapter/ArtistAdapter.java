@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.top.R;
+import com.example.top.databinding.ItemArtistBinding;
 import com.example.top.model.Artist;
 
 import java.util.List;
@@ -28,7 +29,10 @@ public class ArtistAdapter extends RecyclerView.Adapter<ArtistViewHolder> {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_artist, parent,
                 false);
 
-        return new ArtistViewHolder(view);
+        ItemArtistBinding bindin = ItemArtistBinding
+                .inflate(LayoutInflater.from(parent.getContext()), parent, false);
+
+        return new ArtistViewHolder(bindin);
     }
 
     @Override

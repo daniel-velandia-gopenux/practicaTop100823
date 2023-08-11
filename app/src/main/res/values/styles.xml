@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="image_actions">
+
+        <item name="android:background">@drawable/image_background</item>
+        <item name="android:layout_marginBottom">@dimen/small_margin</item>
+    </style>
+</resources>

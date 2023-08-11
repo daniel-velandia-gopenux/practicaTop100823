@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Top</string>
-    <string name="order">order</string>
-    <string name="name">name</string>
+    <string name="order">Order</string>
+    <string name="name">Name</string>
+    <string name="lastName">Last name</string>
+    <string name="birthDay">Birth day</string>
+    <string name="height">Height(cm)</string>
+    <string name="placeBirht">Place birht</string>
+    <string name="note">Note</string>
+    <string name="addArtist_dialogUrl_title">Add photo from url</string>
+    <string name="label_dialog_add">Add photo</string>
+    <string name="label_dialog_cancel">Cancel</string>
 </resources>

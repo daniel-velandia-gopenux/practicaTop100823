@@ -4,11 +4,12 @@ import java.util.Objects;
 
 public class Artist {
 
+    public static final String ORDER = "order";
     private long id;
     private String name;
     private String lastName;
     private long birthDate;
-    private String placeOfBirth;
+    private String placeBirth;
     private short height;
     private String note;
     private int order;
@@ -17,13 +18,13 @@ public class Artist {
     public Artist() {
     }
 
-    public Artist(long id, String name, String lastName, long birthDate, String placeOfBirth,
+    public Artist(long id, String name, String lastName, long birthDate, String placeBirth,
                   short height, String note, int order, String urlPhoto) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.birthDate = birthDate;
-        this.placeOfBirth = placeOfBirth;
+        this.placeBirth = placeBirth;
         this.height = height;
         this.note = note;
         this.order = order;
@@ -66,12 +67,12 @@ public class Artist {
         this.birthDate = birthDate;
     }
 
-    public String getPlaceOfBirth() {
-        return placeOfBirth;
+    public String getPlaceBirth() {
+        return placeBirth;
     }
 
-    public void setPlaceOfBirth(String placeOfBirth) {
-        this.placeOfBirth = placeOfBirth;
+    public void setPlaceBirth(String placeBirth) {
+        this.placeBirth = placeBirth;
     }
 
     public short getHeight() {

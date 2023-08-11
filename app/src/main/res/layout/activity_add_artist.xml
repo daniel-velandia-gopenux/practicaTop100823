@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddArtistActivity"
+    tools:menu="@menu/menu_save"
+  >
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/img_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/baseline_photo_size_select_actual_80"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/small_margin"
+        >
+
+      <com.google.android.material.imageview.ShapeableImageView
+          android:id="@+id/ivDeletePhoto"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:src="@drawable/baseline_delete_32"
+          style="@style/image_actions"
+          />
+
+      <com.google.android.material.imageview.ShapeableImageView
+          android:id="@+id/ivAddPhoto"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:src="@drawable/baseline_add_photo_alternate_32"
+          style="@style/image_actions"
+          />
+
+      <com.google.android.material.imageview.ShapeableImageView
+          android:id="@+id/ivAddLink"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:src="@drawable/baseline_add_link_32"
+          style="@style/image_actions"
+          />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhoto"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        >
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:inputType="textPersonName|textCapWords"
+            />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lastName"
+            android:inputType="textPersonName|textCapWords"
+            />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginEnd="@dimen/tiny_margin"
+            android:inputType="date"
+            >
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/etBirthDay"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/birthDay"
+              android:focusableInTouchMode="false"
+              android:singleLine="true"
+              />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginStart="@dimen/tiny_margin"
+            >
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/etHeight"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/height"
+              android:inputType="number"
+              />
+        </com.google.android.material.textfield.TextInputLayout>
+      </androidx.appcompat.widget.LinearLayoutCompat>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPlaceBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/placeBirht"
+            android:inputType="textAutoComplete"
+            />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/note"
+            />
+      </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
